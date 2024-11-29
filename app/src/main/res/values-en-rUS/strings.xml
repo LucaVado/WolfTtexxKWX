@@ -4,4 +4,7 @@
     <string name="btn_imc">IMC_EN</string>
     <string name="ryuvado">RyuVado_EN</string>
     <string name="idk">WolfTtexx_EN</string>
+    <string name="todo">TODO_EN</string>
+    <string name="male">Male_EN</string>
+    <string name="female">Female_EN</string>
 </resources>

@@ -4,4 +4,7 @@
     <string name="btn_imc">IMC_ES</string>
     <string name="ryuvado">RyuVado_ES</string>
     <string name="idk">No lo se_ES</string>
+    <string name="todo">TODO_ES</string>
+    <string name="male">Hombre_ES</string>
+    <string name="female">Mujer_ES</string>
 </resources>
