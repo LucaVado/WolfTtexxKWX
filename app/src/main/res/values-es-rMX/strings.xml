@@ -7,4 +7,9 @@
     <string name="todo">TODO_ES</string>
     <string name="male">Hombre_ES</string>
     <string name="female">Mujer_ES</string>
+    <string name="height">Altura_ES</string>
+    <string name="contentdescription">ContentDescription</string>
+    <string name="more">+</string>
+    <string name="less">-</string>
+    <string name="weight">Altura</string>
 </resources>

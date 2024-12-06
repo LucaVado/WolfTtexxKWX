@@ -1,9 +1,11 @@
 package com.lucavado.wolfttexx.imccalculatorapp
 
 import android.os.Bundle
+import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
+import com.google.android.material.slider.RangeSlider
 import com.lucavado.wolfttexx.R
 
 class ImcCalculatorActivity : AppCompatActivity() {
@@ -13,6 +15,9 @@ class ImcCalculatorActivity : AppCompatActivity() {
 
     private lateinit var viewMale: CardView
     private lateinit var viewFemale: CardView
+
+    private lateinit var rsHeight: RangeSlider
+    private lateinit var tvHeight: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -29,6 +34,8 @@ class ImcCalculatorActivity : AppCompatActivity() {
     private fun initComponents() {
         viewMale = findViewById(R.id.cardMale)
         viewFemale = findViewById(R.id.cardFemale)
+        rsHeight = findViewById(R.id.rangeSlider1)
+        tvHeight = findViewById(R.id.heightValue)
     }
 
     private fun initListeners() {
@@ -39,6 +46,12 @@ class ImcCalculatorActivity : AppCompatActivity() {
         viewFemale.setOnClickListener {
             changeGender(clickedOnMale = false)
             setGenderColor()
+        }
+
+        rsHeight.addOnChangeListener { _, value, _ ->
+            val df = java.text.DecimalFormat("#.##")
+            val result = df.format(value)
+            tvHeight.text = "$result cm"
         }
     }
 
